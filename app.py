@@ -33,7 +33,7 @@ class NeuralNetModel(nn.Module):
 @st.cache_resource
 def load_models():
     model = LogisticRegression()
-    model.load_state_dict(torch.load("logreg_model.pt", map_location="cpu"))
+    model.load_state_dict(torch.load("lr_model.pt", map_location="cpu"))
     model.eval()
 
     nn_model = NeuralNetModel()
